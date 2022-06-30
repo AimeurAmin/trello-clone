@@ -1,16 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.scss";
 
 function App() {
-  return (
-    <div>
-      <div>
-        <p data-testid="custom-element">Cool</p>
-        <span>Hello React typescript</span>
-      </div>
-    </div>
-  );
+  return <div className={styles.container}>Trello clone</div>;
 }
 
 export default App;
