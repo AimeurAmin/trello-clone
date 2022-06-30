@@ -1,15 +1,16 @@
 import styles from "./NewItemInput.module.scss";
+import { useFocus } from "../../utils/useFocus";
 
 interface NewItemInputProps {
   value: string;
   onChange(event: React.ChangeEvent<HTMLInputElement>): void;
-  reference: React.MutableRefObject<HTMLInputElement>;
 }
 
-const NewItemInput = ({ value, onChange, reference }: NewItemInputProps) => {
+const NewItemInput = ({ value, onChange }: NewItemInputProps) => {
+  const refFocus = useFocus();
   return (
     <input
-      ref={reference}
+      ref={refFocus}
       className={styles["container"]}
       value={value}
       onChange={onChange}

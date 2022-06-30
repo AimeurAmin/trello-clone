@@ -10,11 +10,9 @@ interface NewItemFormProps {
 
 const NewItemForm = ({ onAdd }: NewItemFormProps) => {
   const [text, setText] = useState("");
-  const inputRef = useFocus();
   return (
     <div className={styles["container"]}>
       <NewItemInput
-        reference={inputRef}
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
