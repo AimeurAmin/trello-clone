@@ -6,7 +6,10 @@ interface NewItemButtonProps {
 }
 const NewItemButton = ({ onClick }: NewItemButtonProps) => {
   return (
-    <button onClick={onClick} className={styles["container"]}>
+    <button
+      onClick={onClick}
+      className={styles["container"]}
+    >
       Create
     </button>
   );
