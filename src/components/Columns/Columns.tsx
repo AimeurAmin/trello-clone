@@ -1,5 +1,4 @@
-import { string } from "prop-types";
-import { FC, PropsWithChildren } from "react";
+import { FC } from "react";
 import styles from "./Columns.module.scss";
 import AddNewItem from "../../containers/AddNewItem/AddNewItem";
 import { useAppState } from "../../state/AppStateContext";

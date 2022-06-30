@@ -1,5 +1,4 @@
 import styles from "./App.module.scss";
-import Card from "./components/Card/Card";
 import Columns from "./components/Columns/Columns";
 import AddNewItem from "./containers/AddNewItem/AddNewItem";
 import { PropsWithChildren } from "react";

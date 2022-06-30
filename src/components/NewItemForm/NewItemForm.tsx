@@ -2,7 +2,6 @@ import NewItemInput from "../NewItemInput/NewItemInput";
 import styles from "./NewItemForm.module.scss";
 import { useState } from "react";
 import NewItemButton from "../NewItemButton/NewItemButton";
-import { useFocus } from "../../utils/useFocus";
 
 interface NewItemFormProps {
   onAdd(text: string): void;

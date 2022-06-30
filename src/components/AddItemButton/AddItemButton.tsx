@@ -1,5 +1,4 @@
 import styles from "./AddItemButton.module.scss";
-import { FC } from "react";
 
 interface AddItemButtonProps {
   dark: boolean;
