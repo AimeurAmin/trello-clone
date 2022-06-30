@@ -1,0 +1,23 @@
+@import "src/globalStyles/colors";
+
+.container {
+  background-color: #ffffff3d;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  max-width: 300px;
+  padding: 10px 12px;
+  text-align: left;
+  transition: background 85ms ease-in;
+  width: 100%;
+  &:hover {
+    background-color: #ffffff52;
+  }
+}
+.dark {
+  color: $black-blue;
+}
+
+.notDark {
+  color: $white;
+}
