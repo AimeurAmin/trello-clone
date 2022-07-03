@@ -37,13 +37,15 @@ export const appStateReducer = (
     case "ADD_TASK": {
       const { text, listId } = action.payload;
       const index = findItemIndexById(draft.lists, listId);
+      console.log(index);
 
-      if (index) {
+      if (index !== undefined) {
         draft.lists[index].tasks.push({
           id: nanoid(),
           text,
         });
       }
+
       break;
     }
 
@@ -51,8 +53,6 @@ export const appStateReducer = (
       const listId = action.payload;
 
       draft.lists = draft.lists.filter((item) => {
-        console.log(item.id, listId);
-        console.log(item.id !== listId);
         return item.id !== listId;
       });
       break;
@@ -61,7 +61,7 @@ export const appStateReducer = (
     case "REMOVE_TASK": {
       const { listId, taskId } = action.payload;
       const index = findItemIndexById(draft.lists, listId);
-      if (index) {
+      if (index !== undefined) {
         draft.lists[index].tasks = draft.lists[index].tasks.filter(
           (item) => item.id !== taskId
         );
