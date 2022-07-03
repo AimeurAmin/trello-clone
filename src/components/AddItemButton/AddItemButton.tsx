@@ -12,7 +12,7 @@ const AddItemButton = ({ dark, onClick }: AddItemButtonProps) => {
       onClick={onClick}
       className={`${styles["container"]} ${styles[dark ? "dark" : "notDark"]}`}
     >
-      {`+ Add another ${dark ? "task" : "list"}`}
+      {`+ Add a new ${dark ? "task" : "list"}`}
     </button>
   );
 };

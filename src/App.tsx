@@ -16,7 +16,7 @@ const App: React.FC<PropsWithChildren> = ({ children }) => {
 
       <AddNewItem
         dark={false}
-        toggleButtonText="+ Add another list"
+        toggleButtonText="+ Add a new list"
         onAdd={(text) => {
           dispatch(addList(text));
         }}

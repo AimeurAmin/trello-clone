@@ -5,46 +5,7 @@ import { AppState, List, Task, appStateReducer } from "./appStateReducer";
 import { Action } from "./actions";
 
 const appData: AppState = {
-  lists: [
-    {
-      id: "i01",
-      text: "Backlog",
-      tasks: [
-        {
-          id: "t01",
-          text: "Learn Express (ts)",
-        },
-      ],
-    },
-    {
-      id: "i02",
-      text: "In Progress",
-      tasks: [
-        {
-          id: "t02",
-          text: "Learn React (ts)",
-        },
-        {
-          id: "t03",
-          text: "Build trello app using React (ts)",
-        },
-      ],
-    },
-    {
-      id: "i03",
-      text: "Done",
-      tasks: [
-        {
-          id: "t04",
-          text: "Learn Typescript",
-        },
-        {
-          id: "t05",
-          text: "Learn React (js)",
-        },
-      ],
-    },
-  ],
+  lists: [],
 };
 
 type AppStateContextProps = {

@@ -31,7 +31,7 @@ const Columns: FC<ColumnProps> = ({ text, id: listId }: ColumnProps) => {
       ))}
       <AddNewItem
         dark={true}
-        toggleButtonText="+ Add another task"
+        toggleButtonText="+ Add a new task"
         onAdd={(text) => dispatch(addTask(text, listId))}
       />
     </div>
