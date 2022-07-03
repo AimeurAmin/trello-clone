@@ -3,9 +3,11 @@ import Columns from "./components/Columns/Columns";
 import AddNewItem from "./containers/AddNewItem/AddNewItem";
 import { PropsWithChildren } from "react";
 import { useAppState } from "./state/AppStateContext";
+import { addList } from "./state/actions";
 
 const App: React.FC<PropsWithChildren> = ({ children }) => {
-  const { lists } = useAppState();
+  const { lists, dispatch } = useAppState();
+
   return (
     <div className={styles["container"]}>
       {lists.map((list) => (
@@ -15,7 +17,9 @@ const App: React.FC<PropsWithChildren> = ({ children }) => {
       <AddNewItem
         dark={false}
         toggleButtonText="+ Add another list"
-        onAdd={console.log}
+        onAdd={(text) => {
+          dispatch(addList(text));
+        }}
       />
     </div>
   );
